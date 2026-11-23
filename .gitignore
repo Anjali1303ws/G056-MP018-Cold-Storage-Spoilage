@@ -21,6 +21,7 @@ htmlcov/
 
 # MLflow local experiment outputs
 mlruns/
+mlartifacts/
 
 # Log files
 *.log

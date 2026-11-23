@@ -1,0 +1,48 @@
+# params.yaml - Configuration for Cold Storage Spoilage Prediction (MP018 / G056)
+
+data:
+  raw_train_path: "data/raw/train.csv"
+  raw_later_path: "data/raw/later.csv"
+  raw_holdout_path: "data/raw/holdout_features.csv"
+  target_col: "spoilage_pct"
+  leakage_cols:
+    - "spoilage_found_at_unloading"
+  drop_cols:
+    - "record_id"
+    - "date"
+  numeric_cols:
+    - "storage_days"
+    - "temp_set_c"
+    - "humidity_pct"
+    - "power_cuts_hours"
+    - "bag_weight_kg"
+    - "door_openings_per_day"
+  categorical_cols:
+    - "crop"
+    - "chamber"
+  test_size: 0.2
+  random_state: 42
+
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "cold-storage-spoilage"
+  registered_model_name: "cold-storage-spoilage-regressor"
+  champion_alias: "champion"
+
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 4
+    random_state: 42
+  gradient_boosting:
+    n_estimators: 120
+    learning_rate: 0.08
+    max_depth: 4
+    subsample: 0.9
+    random_state: 42
+  extra_trees:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 4
+    random_state: 42
