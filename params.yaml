@@ -46,3 +46,20 @@ models:
     max_depth: 10
     min_samples_split: 4
     random_state: 42
+
+drift:
+  psi_bins: 10
+  psi_threshold: 0.25
+  categorical_alpha: 0.05
+  drift_share_threshold: 0.15
+  report_path: "reports/drift_report.json"
+
+retraining:
+  later_train_ratio: 0.7
+  promotion_threshold: 0.08
+  model_type: "gradient_boosting"
+  candidate_run_name: "gradient_boosting_v2_retrain"
+
+predictions:
+  holdout_output_path: "reports/holdout_predictions.csv"
+  alt_holdout_output_path: "predictions/holdout_predictions.csv"

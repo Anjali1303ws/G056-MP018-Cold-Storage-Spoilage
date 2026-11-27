@@ -34,18 +34,33 @@ tracking:
   champion_version: 1
 monitoring:
   psi:
-    storage_days: null
-    temp_set_c: null
-    humidity_pct: null
-    power_cuts_hours: null
-    bag_weight_kg: null
-    door_openings_per_day: null
-  most_drifted_feature: null
+    storage_days: 0.067
+    temp_set_c: 0.0449
+    humidity_pct: 0.044
+    power_cuts_hours: 7.3187
+    bag_weight_kg: 0.022
+    door_openings_per_day: 0.1415
+  most_drifted_feature: power_cuts_hours
   mae_by_group:
-    Chamber 1: null
-    Chamber 2: null
-    Chamber 3: null
-  worst_served_group: null
-  mae_v1_on_check: null
-  mae_v2_on_check: null
-  decision: null
+    Chamber 1: 1.6128
+    Chamber 2: 5.2934
+    Chamber 3: 1.3022
+  worst_served_group: Chamber 2
+  mae_v1_on_check: 3.225
+  mae_v2_on_check: 1.1838
+  decision: promote
+group_id: G056
+problem_id: MP018
+stage4:
+  drift_detected: true
+  drift_percentage: 25.0
+  most_drifted_feature: power_cuts_hours
+  retraining_triggered: true
+  retraining_status: promoted_as_champion
+  decision: promote
+  improvement_pct: 63.29
+  new_run_id: 3b77972d832341eb8ad42cf372e9f85b
+  registered_version: 2
+  champion_version: 2
+  holdout_prediction_file: reports/holdout_predictions.csv
+  timestamp: '2026-11-27T07:51:56.885300+00:00'

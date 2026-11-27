@@ -1,0 +1,96 @@
+{
+  "feature_wise_drift": {
+    "storage_days": {
+      "type": "numeric",
+      "psi": 0.067023,
+      "ks_statistic": 0.074,
+      "ks_p_value": 0.15221,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    },
+    "temp_set_c": {
+      "type": "numeric",
+      "psi": 0.044902,
+      "ks_statistic": 0.059333,
+      "ks_p_value": 0.376729,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    },
+    "humidity_pct": {
+      "type": "numeric",
+      "psi": 0.044014,
+      "ks_statistic": 0.038,
+      "ks_p_value": 0.880444,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    },
+    "power_cuts_hours": {
+      "type": "numeric",
+      "psi": 7.318713,
+      "ks_statistic": 0.579667,
+      "ks_p_value": 0.0,
+      "drift_detected": true,
+      "drift_severity": "significant"
+    },
+    "bag_weight_kg": {
+      "type": "numeric",
+      "psi": 0.022046,
+      "ks_statistic": 0.037667,
+      "ks_p_value": 0.886708,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    },
+    "door_openings_per_day": {
+      "type": "numeric",
+      "psi": 0.141459,
+      "ks_statistic": 0.126333,
+      "ks_p_value": 0.001149,
+      "drift_detected": true,
+      "drift_severity": "moderate"
+    },
+    "crop": {
+      "type": "categorical",
+      "chi2_statistic": 2.53196,
+      "p_value": 0.281963,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    },
+    "chamber": {
+      "type": "categorical",
+      "chi2_statistic": 3.34053,
+      "p_value": 0.188197,
+      "drift_detected": false,
+      "drift_severity": "minimal"
+    }
+  },
+  "psi": {
+    "storage_days": 0.06702318867565815,
+    "temp_set_c": 0.04490176527756039,
+    "humidity_pct": 0.044014405536755556,
+    "power_cuts_hours": 7.318713014096284,
+    "bag_weight_kg": 0.02204568040606654,
+    "door_openings_per_day": 0.14145935062400647
+  },
+  "categorical_drift": {
+    "crop": {
+      "statistic": 2.531960264563831,
+      "p_value": 0.28196279981877115,
+      "drifted": false
+    },
+    "chamber": {
+      "statistic": 3.340529704720988,
+      "p_value": 0.1881972145609355,
+      "drifted": false
+    }
+  },
+  "most_drifted_feature": "power_cuts_hours",
+  "drifted_features": [
+    "power_cuts_hours",
+    "door_openings_per_day"
+  ],
+  "total_features_evaluated": 8,
+  "drifted_feature_count": 2,
+  "drift_percentage": 25.0,
+  "overall_drift_detected": true,
+  "drift_summary": "Drift analysis evaluated 8 features (6 numeric, 2 categorical). 2 features drifted (25.0%). Most drifted feature: 'power_cuts_hours' with PSI=7.3187. Overall drift detected: True."
+}
