@@ -31,7 +31,7 @@ tracking:
   experiment_name: cold-storage-spoilage
   best_run_id: 7d43c0ffa65e4fcab59880d91bb28f34
   registered_model_name: cold-storage-spoilage-regressor
-  champion_version: 1
+  champion_version: 2
 monitoring:
   psi:
     storage_days: 0.067
